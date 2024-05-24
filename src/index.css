@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+.mono45 {
+  font-family: mono45-headline,"transducer-variable", sans-serif;
+}
+
+.transducer {
+  font-family: "transducer-variable", Arial, sans-serif;
+}
+
+.bitcount {
+  font-family: bitcount-mono-single-circle, "transducer-variable", sans-serif;
+}
+
 .logo {
   font-family: ethnocentric,"transducer-variable", sans-serif;
   font-weight: 700;
@@ -16,6 +29,9 @@
   font-size: 1.5rem;
 }
 
+nav {
+  color: #ffffff;
+}
 
 .bannerTitles {
   font-family: bitcount-mono-single-circle, "transducer-variable", sans-serif;
@@ -24,6 +40,10 @@
 
 .bannerText {
   font-family: "transducer-variable", Arial, sans-serif;
+}
+
+.bannerDate {
+  font-family: mono45-headline,"transducer-variable", sans-serif;
 }
 
 .bannerButton {

@@ -8,6 +8,11 @@ const Header = () => {
   const [searchInput, setSearchInput] = useState('')
   const navigate = useNavigate()
 
+  // Clear search input on component mount
+  useEffect(() => {
+    setSearchInput('');
+  }, []);
+
   useEffect(() => {
     if(searchInput){
       navigate(`/search?q=${searchInput}`)
