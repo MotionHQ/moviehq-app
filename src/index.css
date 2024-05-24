@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo {
+  font-family: ethnocentric,"transducer-variable", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  font-family: mono45-headline,"transducer-variable", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+
+.bannerTitles {
+  font-family: bitcount-mono-single-circle, "transducer-variable", sans-serif;
+  color: #fffc04;
+}
+
+.bannerText {
+  font-family: "transducer-variable", Arial, sans-serif;
+}
+
+.bannerButton {
+  font-family: mono45-headline,"transducer-variable", sans-serif;
+  font-size: 1.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: "transducer-variable", Arial, sans-serif;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: #0d0c37;
+  color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
