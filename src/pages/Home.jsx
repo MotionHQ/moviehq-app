@@ -11,7 +11,7 @@ const Home = () => {
       <Banner/>
     <div className='container mx-auto px-3 my-10'>
       <h2 className='mono45 text-xl lg:text-3xl mb-2'>Trending</h2>
-      <div className='grid grid-cols-[repeat(auto-fit,250px)]'>
+      <div>
 
         <MovieCard />
 
