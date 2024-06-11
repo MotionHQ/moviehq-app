@@ -44,7 +44,6 @@ function Banner() {
                 }
                 const data = await response.json();
                 setBannerList(data.results);
-                console.log(data.results)
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -63,10 +62,12 @@ function Banner() {
         return <div>Error: {error}</div>;
     }
 
+    console.log(bannerList)
+
     return (
         <section className='w-full h-full'>
             <div className='flex min-h-full max-h-[95vh] overflow-hidden'>
-                {bannerList.map((banner)=>{
+                {bannerList && bannerList.map((banner)=>{
                     return(
                         <div key={banner.id} className='min-w-full min-h-[450px] lg:min-h-full overflow-hidden relative group transition-all' style={{ transform : `translateX(-${currentImage * 100}%)` }}>
                             <div className='w-full h-full'>
