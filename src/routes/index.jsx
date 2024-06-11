@@ -1,7 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import Home from '../pages/Home';
-import ExplorePage from '../pages/ExplorePage';
+import NowPlayingPage from '../pages/NowPlayingPage';
+import TopRatedPage from '../pages/TopRatedPage';
+import PopularPage from '../pages/PopularPage';
+import UpcomingPage from '../pages/UpcomingPage';
 import DetailsPage from '../pages/DetailsPage';
 import SearchPage from '../pages/SearchPage';
 
@@ -15,11 +18,23 @@ const router = createBrowserRouter([
                 element : <Home/>
             },
             {
-                path : ":explore",
-                element : <ExplorePage/>
+                path : "now-playing",
+                element : <NowPlayingPage/>
             },
             {
-                path : ":explore/:id",
+                path : "top-rated",
+                element : <TopRatedPage/>
+            },
+            {
+                path : "popular",
+                element : <PopularPage/>
+            },
+            {
+                path : "upcoming",
+                element : <UpcomingPage/>
+            },
+            {
+                path : "movie/:id",
                 element : <DetailsPage/>
             },
             {

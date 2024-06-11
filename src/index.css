@@ -21,6 +21,10 @@
   font-family: bitcount-mono-single-circle, "transducer-variable", sans-serif;
 }
 
+.ethnocentric {
+  font-family: ethnocentric, sans-serif;;
+}
+
 .logo {
   font-family: ethnocentric,"transducer-variable", sans-serif;
   font-weight: 700;
@@ -72,7 +76,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  background-color: #0d0c37;
+  background-image: linear-gradient(to bottom, #0d0c37, #0d0c37, #000000);
   color: #ffffff;
 
   font-synthesis: none;
