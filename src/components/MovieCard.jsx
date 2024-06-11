@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { IoIosHeart } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
-export function MovieCard() {
+export function MovieCard({ url }) {
     const [movieList, setMovieList] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
@@ -12,7 +12,7 @@ export function MovieCard() {
         const fetchMovieList = async () => {
             setLoading(true);
             try {
-                const response = await fetch("https://api.themoviedb.org/3/trending/all/week?api_key=1b436df3ff164d38c44400425306c9f5");
+                const response = await fetch(url);
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }
@@ -27,7 +27,7 @@ export function MovieCard() {
         };
 
         fetchMovieList();
-    }, []);
+    }, [url]); // Add url as a dependency
 
     if (loading) {
         return <div>Loading...</div>;
@@ -41,7 +41,7 @@ export function MovieCard() {
         <>
             {movieList.length > 0 ? (
                 movieList.map((movie) => (
-                    <Link to={"/"+movie.media_type+"/"+movie.id} key={movie.id} className='card relative w-full min-w-[250px] max-w-[250px] h-85 rounded overflow-hidden transition-all hover:scale-105'>
+                    <Link to={"/" + movie.media_type + "/" + movie.id} key={movie.id} className='card relative w-full min-w-[250px] max-w-[250px] h-85 rounded overflow-hidden transition-all hover:scale-105'>
                         <img 
                             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                             alt={movie.title || movie.name}
@@ -51,11 +51,11 @@ export function MovieCard() {
                             <div className='drop-shadow-xl'>
                                 <h3 className='bitcount text-neon-yellow text-xl lg:text-2xl text-center py-5 px-3 mt-1 md:mt-3 xl:mt-4 min-w-[250px] max-w-[250px]'>{movie?.title || movie?.name}</h3>
                             </div>
-                            <div className='max-w-[250px]'>
-                                <p className='transducer line-clamp-4 mono45 px-3 my-2 text-sm'>{movie?.overview}</p>
-                                <div className='flex justify-center m-4'>
+                                <div className='flex justify-center'>
                                     <p className='mono45 text-neon-blue text-xl'>{movie?.release_date}</p>
                                 </div>
+                            <div className='max-w-[250px]'>
+                                <p className='transducer line-clamp-4 mono45 px-3 my-2 text-sm'>{movie?.overview}</p>
                                 <div className='flex justify-around px-3'>
                                     <button className='mono45 text-sm lg:text-lg bg-neon-red rounded hover:text-neon-yellow hover:bg-gradient-to-r from-neon-red to-neon-blue shadow-md transition-all hover:scale-105 px-4 py-0.5 drop-shadow-2xl'>
                                         Read More
