@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IoIosHeart } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
-export function MovieCard() {
+export function NowPlayingCard() {
     const [movieList, setMovieList] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
@@ -78,4 +78,4 @@ export function MovieCard() {
     );
 }
 
-export default MovieCard;
+export default NowPlayingCard;

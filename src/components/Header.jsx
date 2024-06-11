@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink, useNavigate, Link } from 'react-router-dom';
 import { IoSearchCircle } from "react-icons/io5";
 import { navigation } from "../constants/navigation";

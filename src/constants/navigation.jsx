@@ -5,7 +5,7 @@ export const navigation = [
     },
     {
       label: "TOP RATED",
-      href: "top",
+      href: "top-rated",
     },
     {
       label: "POPULAR",
