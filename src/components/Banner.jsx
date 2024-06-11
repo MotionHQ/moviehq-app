@@ -96,7 +96,7 @@ function Banner() {
                                 <p className='transducer text-ellipsis line-clamp-3 my-2 text-sm md:text-lg lg:text-2xl drop-shadow-2xl'>{banner.overview}</p>
                                 <p className='bannerDate text-neon-blue md:text-xl lg:text-3xl drop-shadow-2xl'>{banner.release_date || banner.first_air_date}</p>
                                 <div className='flex items-center gap-2 md:gap-3 md:text-base lg:gap-5 lg:text-xl text-sm drop-shadow-2xl'>
-                                    <p>Rating : { Number(banner.vote_average).toFixed(1) }+</p>
+                                    <p>Rating : { Number(banner.vote_average).toFixed(1) }/10</p>
                                     <span>|</span>
                                     <p>Views : { Number(banner.popularity).toFixed(0) }+</p>
                                 </div>

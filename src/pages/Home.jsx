@@ -1,24 +1,21 @@
-import React from 'react'
-import Banner from '../components/Banner'
-import { MovieCard } from '../components/MovieCard'
-
+import React from 'react';
+import Banner from '../components/Banner';
+import { MovieCard } from '../components/MovieCard';
 
 const Home = () => {
+    return (
+        <div>
+            <Banner />
+                <div className='bg-gradient-to-r from-neon-red to-neon-blue relative mt-10 md:py-px lg:py-1 text-neon-yellow transition'>
+                <h2 className='mono45 text-3xl my-5 text-center'>TRENDING THIS WEEK</h2>
+                </div>
+            <div className='container mx-auto px-3 my-10'>
+                <div className='grid-container'>
+                    <MovieCard />
+                </div>
+            </div>
+        </div>
+    );
+};
 
-  return (
-    
-    <div>
-      <Banner/>
-    <div className='container mx-auto px-3 my-10'>
-      <h2 className='mono45 text-xl lg:text-3xl mb-2'>Trending</h2>
-      <div className='grid grid-cols-[repeat(auto-fit,250px)]'>
-
-        <MovieCard />
-
-      </div>
-    </div>
-    </div>
-  )
-}
-
-export default Home
+export default Home;

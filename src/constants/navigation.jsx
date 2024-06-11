@@ -1,34 +1,25 @@
-import { IoHome } from "react-icons/io5";
-import { PiTelevisionSimpleFill } from "react-icons/pi";
-import { BiSolidMoviePlay } from "react-icons/bi";
-import { IoSearchCircle } from "react-icons/io5";
-
 export const navigation = [
     {
-      label : "TV SHOWS",
-      href : "tv",
-      icon : <PiTelevisionSimpleFill/>
+      label : "NOW PLAYING",
+      href : "now-playing",
     },
     {
-      label: "MOVIES",
-      href: "movie",
-      icon: <BiSolidMoviePlay/>
+      label: "TOP RATED",
+      href: "top",
+    },
+    {
+      label: "POPULAR",
+      href: "popular",
+    },
+    {
+      label: "UPCOMING",
+      href: "upcoming",
     }
   ]
   
 export const mobileNavigation = [
-    {
-        label : "HOME",
-        href : "/",
-        icon : <IoHome/>
-    },
-    ...navigation,
-    {
-        label : "SEARCH",
-        href : "/search",
-        icon : <IoSearchCircle/>
+    ...navigation
 
-    }
 ]
 
 export default navigation

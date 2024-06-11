@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Fonts */
 .mono45 {
   font-family: mono45-headline,"transducer-variable", sans-serif;
@@ -35,6 +41,8 @@ nav {
 
 .bannerTitles {
   font-family: bitcount-mono-single-circle, "transducer-variable", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   color: #fffc04;
 }
 
@@ -49,6 +57,12 @@ nav {
 .bannerButton {
   font-family: mono45-headline,"transducer-variable", sans-serif;
   font-size: 1.5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 4rem;
 }
 
 body {

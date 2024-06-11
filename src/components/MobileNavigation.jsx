@@ -4,20 +4,17 @@ import { NavLink } from 'react-router-dom'
 
 const MobileNavigation = () => {
   return (
-    <section className='lg:hidden h-16 bg-[#0d0c37] bg-opacity-90 fixed bottom-0 w-full'>
-        <div className='flex items-center justify-between h-full text-white'>
+    <section className='lg:hidden h-16 bg-[#0d0c37] bg-opacity-90 fixed bottom-0 w-full bg-gradient-to-t from-dark-blue to-black/50 border-t-2 border-neon-yellow'>
+        <div className='flex items-center justify-around h-full text-neon-blue'>
             {
-                mobileNavigation.map((nav,index) => {
+                mobileNavigation.map((nav) => {
                     return (
                         <NavLink 
                         key={nav.label+"mobileNavigation"}
                         to={nav.href}
-                        className={({isActive})=>`px-3 flex h-full items-center flex-col justify-center ${isActive && "text-neon-red"}`}
+                        className={({isActive})=>`px-2 flex h-full items-center flex-col justify-center ${isActive && "text-neon-red bg-gradient-to-t from-dark-blue to-black/50"}`}
                         >
-                            <div className='text-3xl'>
-                                {nav.icon}
-                            </div>
-                            <p className='bannerText text-sm'>{nav.label}</p>
+                            <p className='bannerText text-xs text-center'>{nav.label}</p>
                         </NavLink>
                     )
                 })

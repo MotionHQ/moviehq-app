@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, useNavigate, Link } from 'react-router-dom';
 import { IoSearchCircle } from "react-icons/io5";
-import { navigation, mobileNavigation } from "../constants/navigation";
+import { navigation } from "../constants/navigation";
 
 const Header = () => {
   
@@ -43,17 +43,18 @@ const Header = () => {
               <h1 className='text-2xl lg:text-4xl'>MovieHQ</h1>
             </div>
         </Link>
-          <nav className='hidden lg:flex gap-1 ml-5'>
+
+        <nav className='hidden lg:flex gap-1 ml-5'>
             {navigation.map((nav, index) => (
-              <NavLink
-                key={index}
-                to={`/${nav.href}`}
-                className={({ isActive }) => `nav-links px-5 hover:text-neon-red ${ isActive && 'text-neon-red'}`}
-              >
-                {nav.label}
-              </NavLink>
+                <NavLink
+                    key={index}
+                    to={`/${nav.href}`}
+                    className={({ isActive }) => `nav-links px-5 hover:text-neon-red ${isActive ? 'text-neon-red' : ''}`}
+                >
+                    {nav.label}
+                </NavLink>
             ))}
-          </nav>
+        </nav>
 
           <div className='ml-auto flex items-center gap-5'>
             <form className='flex items-center gap-2 outline outline-neon-red rounded-full hover:outline-neon-blue' onSubmit={handleSubmit}>
