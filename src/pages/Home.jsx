@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import { MovieCard } from '../components/MovieCard';
+import { Footer } from '../components/Footer';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                     <MovieCard />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
