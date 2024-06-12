@@ -1,6 +1,8 @@
 import Banner from '../components/Banner';
 import MovieCard from '../components/MovieCard';
 import Categories from "../components/Categories";
+import Footer from '../components/Footer'
+import MobileNavigation from '../components/MobileNavigation'
 
 const TopRatedPage = () => {
 
@@ -19,6 +21,8 @@ const TopRatedPage = () => {
                     <MovieCard url={url}/>
                 </div>
             </div>
+            <Footer/>
+            <MobileNavigation/>
         </div>
     );
 };

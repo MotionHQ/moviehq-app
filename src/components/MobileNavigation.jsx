@@ -10,8 +10,8 @@ const MobileNavigation = () => {
                 mobileNavigation.map((nav) => {
                     return (
                         <NavLink 
-                        key={nav.label+"mobileNavigation"}
-                        to={nav.href}
+                        key={nav.index}
+                        to={`/${nav.href}`}
                         className={({isActive})=>`px-2 flex h-full items-center flex-col justify-center ${isActive && "text-neon-red bg-gradient-to-t from-dark-blue to-black/50"}`}
                         >
                             <p className='bannerText text-xs text-center'>{nav.label}</p>

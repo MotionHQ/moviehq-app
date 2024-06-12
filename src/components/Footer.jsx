@@ -2,15 +2,16 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className='text-center bg-gradient-to-t from-dark-blue to-black py-6'>
-      <div className='flex items-center justify-center gap-5 text-neon-yellow mono45 text-lg'>
-        <Link to="/" className='ethnocentric text-2xl text-neon-blue hover:text-neon-red hover:scale-105 transition-all'>MotionHQ</Link>
-        <Link className='hover:scale-105 transition-all' to="/">About</Link>
-        <Link className='hover:scale-105 transition-all' to="/">Contact</Link>
+    <footer className='w-full bg-gradient-to-t from-dark-blue to-black py-6'>
+      <div className='container mx-auto flex flex-col sm:flex-row items-center justify-between gap-5 text-neon-yellow mono45 text-lg px-4'>
+        <Link to="/" className='ethnocentric text-2xl text-neon-blue hover:text-neon-red hover:scale-105 transition-all'>MOVIEHQ</Link>
+        <div className='flex gap-5'>
+          <Link className='hover:scale-105 transition-all' to="/about">About</Link>
+          <Link className='hover:scale-105 transition-all' to="/about">Contact</Link>
+        </div>
       </div>
-      <p className='text-sm text-white py-2'>Created By Ian D'souza</p>
+      <p className='text-center text-sm text-white py-2'>Created By Ian D'souza</p>
     </footer>
-
   )
 }
 

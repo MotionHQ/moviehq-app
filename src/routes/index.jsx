@@ -7,6 +7,7 @@ import PopularPage from '../pages/PopularPage';
 import UpcomingPage from '../pages/UpcomingPage';
 import DetailsPage from '../pages/DetailsPage';
 import SearchPage from '../pages/SearchPage';
+import AboutPage from '../pages/AboutPage';
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path : "upcoming",
                 element : <UpcomingPage/>
+            },
+            {
+                path : "about",
+                element : <AboutPage/>
             },
             {
                 path : "movie/:id",

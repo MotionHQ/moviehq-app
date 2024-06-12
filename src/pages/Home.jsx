@@ -1,5 +1,7 @@
 import Banner from '../components/Banner';
 import MovieCard from '../components/MovieCard';
+import Footer from '../components/Footer'
+import MobileNavigation from '../components/MobileNavigation'
 
 const Home = () => {
     const url = "https://api.themoviedb.org/3/trending/all/week?api_key=1b436df3ff164d38c44400425306c9f5";
@@ -16,6 +18,8 @@ const Home = () => {
                     <MovieCard url={url}/>
                 </div>
             </div>
+            <Footer/>
+            <MobileNavigation/>
         </div>
     );
 };

@@ -6,6 +6,7 @@ export function MovieCard({ url }) {
     const [movieList, setMovieList] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     useEffect(() => {
         // Fetch movie list
@@ -40,8 +41,16 @@ export function MovieCard({ url }) {
     return (
         <>
             {movieList.length > 0 ? (
-                movieList.map((movie) => (
-                    <Link to={"/" + movie.media_type + "/" + movie.id} key={movie.id} className='card relative w-full min-w-[250px] max-w-[250px] h-85 rounded overflow-hidden transition-all hover:scale-105'>
+                movieList.map((movie, index) => (
+                    <Link
+                        to={"/" + movie.media_type + "/" + movie.id}
+                        key={movie.id}
+                        className={`card relative w-full min-w-[250px] max-w-[250px] h-85 rounded overflow-hidden transition-all ${
+                            hoveredIndex === index ? 'scale-105' : ''
+                        }`}
+                        onTouchStart={() => setHoveredIndex(index)}
+                        onTouchEnd={() => setHoveredIndex(null)}
+                    >
                         <img 
                             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                             alt={movie.title || movie.name}
@@ -57,10 +66,12 @@ export function MovieCard({ url }) {
                             <div className='max-w-[250px]'>
                                 <p className='transducer line-clamp-4 mono45 px-3 my-2 text-sm'>{movie?.overview}</p>
                                 <div className='flex justify-around px-3'>
-                                    <button className='mono45 text-sm lg:text-lg bg-neon-red rounded hover:text-neon-yellow hover:bg-gradient-to-r from-neon-red to-neon-blue shadow-md transition-all hover:scale-105 px-4 py-0.5 drop-shadow-2xl'>
-                                        Read More
+                                    <button className='mono45 text-sm lg:text-lg text-neon-blue bg-neon-red rounded hover:text-neon-yellow hover:bg-gradient-to-r from-neon-red to-neon-blue shadow-md transition-all hover:scale-105 px-4 py-0.5 drop-shadow-2xl'>
+                                        <a href="#">Read More</a>
                                     </button>
+                                    <a href="#">
                                     <IoIosHeart className='text-neon-yellow/85 text-3xl hover:text-neon-red active:text-neon-red cursor-pointer shadow-md transition-all hover:scale-105' />
+                                    </a>
                                 </div>
                                 <div className='flex items-center py-3 justify-between text-xs bg-dark-blue'>
                                     <p className='mx-3'>Views: {movie?.popularity.toFixed(0)}+</p>

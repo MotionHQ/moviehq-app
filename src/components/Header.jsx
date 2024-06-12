@@ -40,7 +40,7 @@ const Header = () => {
       <div className='container mx-auto px-2 flex items-center h-full'>
         <Link to={"/"}>
             <div className='logo px-2 text-neon-blue hover:text-neon-red active:text-neon-red'>
-              <h1 className='text-2xl lg:text-4xl'>MovieHQ</h1>
+              <h1 className='text-xl lg:text-4xl'>MovieHQ</h1>
             </div>
         </Link>
 
