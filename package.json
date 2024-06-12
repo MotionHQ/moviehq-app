@@ -1,5 +1,6 @@
 {
   "name": "moviehq-app",
+  "homepage": "https://motionhq.ca/moviehq-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
