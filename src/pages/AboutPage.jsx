@@ -1,4 +1,4 @@
-import TmdbLogo from '../components/TmdbLogo';
+import TmdbLogo from '../components/TmdbLogo'
 import MobileNavigation from '../components/MobileNavigation'
 
 const AboutPage = () => {
@@ -26,7 +26,7 @@ const AboutPage = () => {
             </div>
             <MobileNavigation/>
         </div>
-    );
-};
+    )
+}
 
-export default AboutPage;
+export default AboutPage
