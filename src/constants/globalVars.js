@@ -4,7 +4,7 @@ export const movieEndpoint = 'https://api.themoviedb.org/3/movie/';
 export const movieSearch = 'https://api.themoviedb.org/3/search/movie'; // Connect to API for search function
 
 // Connect to hidden API key
-export const apiKey = import.meta.env.REACT_APP_ACCESS_KEY;
+export const apiKey = import.meta.env.VITE_ACCESS_KEY;
 
 export const truncateTitle = ( title, maxLength) => {
     //Add '...' if the original overview has more words than maxLength

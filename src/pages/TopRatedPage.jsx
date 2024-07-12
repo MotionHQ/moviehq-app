@@ -4,10 +4,12 @@ import Categories from "../components/Categories";
 import Footer from '../components/Footer'
 import MobileNavigation from '../components/MobileNavigation'
 
+const accessKey = import.meta.env.VITE_ACCESS_KEY;
+
 const TopRatedPage = () => {
 
-    const url = "https://api.themoviedb.org/3/movie/top_rated?api_key=1b436df3ff164d38c44400425306c9f5";
-    const bannerURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=1b436df3ff164d38c44400425306c9f5";
+    const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${accessKey}`;
+    const bannerURL = `https://api.themoviedb.org/3/movie/top_rated?api_key=${accessKey}`;
     
     return (
         <div>

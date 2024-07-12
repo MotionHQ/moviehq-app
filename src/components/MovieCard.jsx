@@ -19,7 +19,6 @@ export function MovieCard({ url }) {
                 }
                 const data = await response.json();
                 setMovieList(data.results || []); // Ensure data.results is an array
-                console.log('Fetched data:', data); // Debugging line
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -60,18 +59,16 @@ export function MovieCard({ url }) {
                             <div className='drop-shadow-xl'>
                                 <h3 className='bitcount text-neon-yellow text-xl lg:text-2xl text-center py-5 px-3 mt-1 md:mt-3 xl:mt-4 min-w-[250px] max-w-[250px]'>{movie?.title || movie?.name}</h3>
                             </div>
-                                <div className='flex justify-center'>
-                                    <p className='mono45 text-neon-blue text-xl'>{movie?.release_date}</p>
-                                </div>
+                            <div className='flex justify-center'>
+                                <p className='mono45 text-neon-blue text-xl'>{movie?.release_date}</p>
+                            </div>
                             <div className='max-w-[250px]'>
                                 <p className='transducer line-clamp-4 mono45 px-3 my-2 text-sm'>{movie?.overview}</p>
                                 <div className='flex justify-around px-3'>
                                     <button className='mono45 text-sm lg:text-lg text-neon-blue bg-neon-red rounded hover:text-neon-yellow hover:bg-gradient-to-r from-neon-red to-neon-blue shadow-md transition-all hover:scale-105 px-4 py-0.5 drop-shadow-2xl'>
-                                        <a href="#">Read More</a>
+                                        Read More
                                     </button>
-                                    <a href="#">
                                     <IoIosHeart className='text-neon-yellow/85 text-3xl hover:text-neon-red active:text-neon-red cursor-pointer shadow-md transition-all hover:scale-105' />
-                                    </a>
                                 </div>
                                 <div className='flex items-center py-3 justify-between text-xs bg-dark-blue'>
                                     <p className='mx-3'>Views: {movie?.popularity.toFixed(0)}+</p>
